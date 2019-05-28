@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="The 5zig Mod">
+    <output-path>$PROJECT_DIR$/../</output-path>
+    <root id="archive" name="The-5zig-Mod-latest.jar">
+      <element id="module-output" name="The 5zig Mod" />
+      <element id="module-output" name="Utils" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/The 5zig Mod/lib/h2-1.4.183.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/The 5zig Mod/lib/asm-all-5.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/The 5zig Mod/lib/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/The 5zig Mod/licenses" />
+      <element id="module-output" name="Mod Utils" />
+      <element id="module-output" name="The 5zig API" />
+      <element id="module-output" name="Teamspeak API" />
+      <element id="module-output" name="Docs" />
+      <element id="dir-copy" path="$PROJECT_DIR$/The 5zig Mod/res" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/The 5zig Mod/lib/jacob.jar" path-in-jar="/" />
+      <element id="module-output" name="1.13" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.10/1.10.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.10/1.10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.10.2/1.10.2.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.10.2/1.10.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.11/1.11.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.11/1.11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.11.2/1.11.2.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.11.2/1.11.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.12/1.12.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.12/1.12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.12.2/1.12.2.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.12.2/1.12.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.13/1.13.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.13/1.13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.7.10/1.7.10.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.7.10/1.7.10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.8/1.8.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.8/1.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.8.8/1.8.8.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.8.8/1.8.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.8.9/1.8.9.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.8.9/1.8.9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.9/1.9.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.9/1.9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Minecraft-Utils/1.9.4/1.9.4.iml" filepath="$PROJECT_DIR$/Minecraft-Utils/1.9.4/1.9.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Repository/Docs/Docs.iml" filepath="$PROJECT_DIR$/../Repository/Docs/Docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mod Utils/Mod Utils.iml" filepath="$PROJECT_DIR$/Mod Utils/Mod Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Repository/Teamspeak API/Teamspeak API.iml" filepath="$PROJECT_DIR$/../Repository/Teamspeak API/Teamspeak API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Repository/The 5zig API/The 5zig API.iml" filepath="$PROJECT_DIR$/../Repository/The 5zig API/The 5zig API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The 5zig Mod/The 5zig Mod.iml" filepath="$PROJECT_DIR$/The 5zig Mod/The 5zig Mod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
+    </modules>
+  </component>
+</project>

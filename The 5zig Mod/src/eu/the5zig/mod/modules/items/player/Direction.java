@@ -1,0 +1,87 @@
+package eu.the5zig.mod.modules.items.player;
+
+import eu.the5zig.mod.I18n;
+import eu.the5zig.mod.The5zigMod;
+import eu.the5zig.mod.modules.StringItem;
+import eu.the5zig.mod.render.BracketsFormatting;
+import eu.the5zig.mod.render.DisplayRenderer;
+
+public class Direction extends StringItem {
+
+	@Override
+	public void registerSettings() {
+		getProperties().addSetting("directionStyle", Style.STRING, Style.class);
+		getProperties().addSetting("showDirectionTowards", false);
+	}
+
+	@Override
+	protected Object getValue(boolean dummy) {
+		return getF(dummy);
+	}
+
+	private String getF(boolean dummy) {
+		float rotationYaw = dummy ? 0 : The5zigMod.getVars().getPlayerRotationYaw();
+		Style directionStyle = (Style) getProperties().getSetting("directionStyle").get();
+		if (directionStyle == Style.DEGREE) {
+			return shorten(Math.abs(rotationYaw) % 360.0) + "\u00b0";
+		}
+		float fDir = rotationYaw / 360 * 4;
+		fDir = fDir % 4;
+		if (fDir < 0) {
+			fDir = Math.abs(-4 - fDir);
+		}
+
+		String result;
+		if (fDir >= 3.75 && fDir <= 4.0 || fDir >= 0.0 && fDir <= 0.25) {
+			String s = shorten(fDir);
+			if (s.startsWith("4"))
+				s = "0" + s.substring(1);
+			result = toDirection( s, I18n.translate("ingame.f.south"), "Z+");
+		} else if (fDir > 0.25 && fDir < 0.75) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.south_west"), "X-, Z+");
+		} else if (fDir >= 0.75 && fDir <= 1.25) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.west"), "X-");
+		} else if (fDir > 1.25 && fDir < 1.75) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.north_west"), "X-, Z-");
+		} else if (fDir >= 1.75 && fDir <= 2.25) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.north"), "Z-");
+		} else if (fDir > 2.25 && fDir < 2.75) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.north_east"), "X+, " + "Z-");
+		} else if (fDir >= 2.75 && fDir <= 3.25) {
+			result = toDirection(shorten(fDir), I18n.translate("ingame.f.east"), "X+");
+		} else if (fDir > 3.25 && fDir < 3.75) {
+			String s = shorten(fDir);
+			if (s.startsWith("4"))
+				s = "0" + s.substring(1);
+			result = toDirection(s, I18n.translate("ingame.f.south_east"), "X+, Z+");
+		} else {
+			result = I18n.translate("error");
+		}
+		return result;
+	}
+
+	private String toDirection(String number, String direction, String towards) {
+		DisplayRenderer renderer = The5zigMod.getRenderer();
+		Style directionStyle = (Style) getProperties().getSetting("directionStyle").get();
+		String rightBr = The5zigMod.getConfig().getEnum("formattingBrackets", BracketsFormatting.class).hasFirst() ? renderer.getBracketsRight() : "";
+		towards = " " + renderer.getBrackets() + renderer.getBracketsLeft() + renderer.getPrefix() + towards + renderer.getBrackets() + rightBr;
+
+		boolean directionTowards = (Boolean) getProperties().getSetting("showDirectionTowards").get();
+		if (directionStyle == Style.NUMBER)
+			return number + (directionTowards ? towards : "");
+		if (directionStyle == Style.STRING)
+			return direction + (directionTowards ? towards : "");
+		return direction + " (" + number + ") " + (directionTowards ? towards : "");
+	}
+
+	@Override
+	public String getName() {
+		return "F";
+	}
+
+	public enum Style {
+
+		STRING, NUMBER, BOTH, DEGREE
+
+	}
+}

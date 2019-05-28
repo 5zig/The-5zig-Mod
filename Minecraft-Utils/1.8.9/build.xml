@@ -1,0 +1,30 @@
+<project default="deploy">
+    <target name="init">
+        <property name="sourceDir" value="src"/>
+        <property name="outputDir" value="bin"/>
+        <property name="jarname" value="../minecraft-utils.jar"/>
+
+        <path id="classpath">
+            <fileset file="1.8.9.jar" />
+            <fileset dir="../../libraries" />
+            <fileset dir="../../the-5zig-mod/lib" />
+
+            <fileset file="../../utils/utils.jar" />
+            <fileset file="../../mod-utils/mod-utils.jar" />
+            <fileset file="../../the-5zig-api/the-5zig-api.jar" />
+        </path>
+    </target>
+    <target name="clean" depends="init">
+        <delete dir="${outputDir}"/>
+    </target>
+    <target name="prepare" depends="clean">
+        <mkdir dir="${outputDir}"/>
+    </target>
+    <target name="compile" depends="prepare">
+        <javac target="1.6" source="1.6" srcdir="${sourceDir}" destdir="${outputDir}" debug="on" debuglevel="lines,vars,source" classpathref="classpath" encoding="iso-8859-1" includeantruntime="false"/>
+    </target>
+    <target name="jar">
+        <jar destfile="${jarname}" basedir="${outputDir}"/>
+    </target>
+    <target name="deploy" depends="init,compile,jar"/>
+</project>

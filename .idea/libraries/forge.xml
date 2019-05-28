@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="forge">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/The 5zig Mod/forge/jopt-simple-4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/The 5zig Mod/forge/forge-1.9-12.16.0.1770-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/The 5zig Mod/forge/trove4j-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/The 5zig Mod/forge/vecmath-1.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
